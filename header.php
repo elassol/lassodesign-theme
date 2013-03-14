@@ -25,7 +25,7 @@
     wp_head();
 ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
  
 <div id="wrapper">
     <div id="header">
