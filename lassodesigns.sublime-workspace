@@ -1,0 +1,358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"web",
+				"-webkit-columns:   (property)"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"include",
+				"include_once"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"no",
+				"no-repeat  (value)"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 225.0,
+		"selected_items":
+		[
+			[
+				"fetc",
+				"Fetch: Package"
+			],
+			[
+				"f",
+				"Fetch: Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Fe",
+				"Fetch: Package"
+			],
+			[
+				"fe",
+				"Fetch: Package"
+			],
+			[
+				"FETC",
+				"Fetch: Package"
+			],
+			[
+				"manag",
+				"Fetch: Manage"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html5"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 705.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/lassodesigns.sublime-workspace",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/index.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/header.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-project.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/flexslider.css",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/php/MediaAccess.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/metaboxes/portfolio_metabox.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/meta.css",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/functions.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/style.css",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/functions2.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/php/MetaBox.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/plugins/envato-flex-slider/envato-flex-slider.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/metaboxes/portfolio.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-project-backup.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/footer.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c-backup.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-portfolio.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page-portfolio.php",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/main.css",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/images/portfolio.png",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/custom-post-types.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/archive.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/posttypes.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/style.css",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/sidebar.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/comments.php",
+		"/Applications/MAMP/htdocs/lassodesign/index.php",
+		"/Applications/MAMP/htdocs/lassodesign/css/style.css",
+		"/Applications/MAMP/htdocs/lassodesign/header.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/index.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/css/style.css",
+		"/Users/eduardo.lasso/Desktop/lassodesign/single.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/footer.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/archive.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/page.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/sidebar.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/functions.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/css/header.php",
+		"/Users/eduardo.lasso/Desktop/lassodesign/index.html",
+		"/Users/eduardo.lasso/Desktop/lassodesign/css/main.css",
+		"/Users/eduardo.lasso/Desktop/lassodesign/css/css/style.css",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/stylecss.sublime-snippet",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/css.sublime-snippet",
+		"/Users/eduardo.lasso/Downloads/html5bones-1.6.0/index.html",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/html5.sublime-snippet",
+		"/Users/eduardo.lasso/Desktop/index.html",
+		"/Users/eduardo.lasso/Downloads/html5bones-1.6.0/index-bare-bones.html",
+		"/Volumes/OOHH/eduardo_lowe/Eduardo/000 projects 2012/newsletter/nov-2011/newsletter-08-03-12.html",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/OOHH/eduardo_lowe/Eduardo/000 projects 2012/it newsletter/html/index-break.html",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/eduardo.lasso/Downloads/quicksand-master 2/README.textile",
+		"/Users/eduardo.lasso/Downloads/masonry-site/README.mdown",
+		"/Users/eduardo.lasso/Desktop/ipg-newsletter/css/main/styles.css",
+		"/Users/eduardo.lasso/Desktop/iti-app/sftp-config.json",
+		"/Users/eduardo.lasso/Desktop/iti-app/index.php"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"span",
+			"Product",
+			"created"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Work"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"meta",
+				"css/meta.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}

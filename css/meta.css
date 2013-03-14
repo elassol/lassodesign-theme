@@ -1,0 +1,46 @@
+.lowe_meta_control .float-control {width:100%;overflow: hidden;margin-bottom: 10px;}
+.lowe_meta_control label {float:left;width:40%;margin-top: 6px;padding-left:10px;font-weight: bold;line-height: 25px;}
+.lowe_meta_control label + p {float:left;width:50%;margin-left:10px;}
+.float-left {width:45%;float:left}
+.float-full {width:90%;float:left;}
+.float-full  label {width:20%;}
+.float-full label + p {width:78%;}
+
+.float-full a.button {float:right;}
+.float-full.attachment input[type="text"] {float:left;width:80%;}
+.float-full.attachment span {clear: both;padding-top:5px;display:block;}
+
+.float-right {width:45%;float:right}
+.lowe_meta_control input[type="text"], .lowe_meta_control textarea {width:100%;}
+
+#_showreel_meta_metabox .float-left {width:100%;}
+#_showreel_meta_metabox .float-left label {width:20%;}
+
+.lowe_meta_control table {width:100%;border-collapse:collapse;}
+.lowe_meta_control td, .lowe_meta_control th {border:1px solid #DFDFDF;padding:5px;text-align: left}
+.lowe_meta_control th, .lowe_meta_control td {padding-left:10px}
+.lowe_meta_control textarea {height:100px;}
+.lowe_meta_control td {background: #fff}
+
+#feature_image_id {width:50px;}
+#feature_image_src {width:300px}
+
+#file-upload {width:100%;overflow:hidden;float:left;width:50%;}
+#file-upload li {float:left;margin-right:10px;}
+
+#_downloads_meta_metabox .float-left {width:100%;}
+#_downloads_meta_metabox .float-left label {width:20%;}
+
+#upload_image_button {display:inline-block}
+#_downloads_meta_metabox .bold {font-weight: bold;}
+
+#_video_meta_metabox .float-left {width:100%;}
+#_video_meta_metabox .float-left label {width:20%;}
+
+.video-categories-meta {float:left;width:50%;margin-left:10px;margin-top:6px;}
+.category-item {margin-bottom: 10px;}
+.category-item input[type="text"] {width:60%}
+.add-category {height:40px;}
+.lowe_meta_control input[type="text"].short-text {width:50px;}
+
+.support-text {font-size: 10px; font-style: italic;}
