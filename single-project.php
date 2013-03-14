@@ -33,7 +33,7 @@
 
             <div class="image-work">
 
-                <!-- <div class="flex-container">
+                <div class="flex-container">
                     <div class="flexslider">
                     <ul class="slides">
                         <?php
@@ -52,7 +52,7 @@
                         ?>
                         </ul>
                     </div>
-                </div> -->
+                </div> 
 
                 <?php if ($meta['portfolio_image'] != "") { ?>
                    <img src="<?php echo $meta['portfolio_image']; ?>" />
