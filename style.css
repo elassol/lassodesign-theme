@@ -8,6 +8,158 @@ Version: 1.0
 */
 
 
+/* ==========================================================================
+   basic styles 
+   ==========================================================================  */
+
+html { margin-top: 0px !important; }
+
+body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; line-height: 1.5em; font-family: "Helvetica", Arial, Verdana, sans-serif;}
+
+#wrapper, #header, #blog, #footer {margin: 0px; padding: 0px;}
+
+
+
+#wrapper {width: 900px; margin: 0 auto; background-color: #fff;}
+
+#header {
+  width: 850px;
+  height: 60px;
+  padding: 25px;
+  background-color:#333;
+}
+
+.logo-header {
+  display: block;
+  overflow: hidden;
+  width: 226px;
+  height: 50px; 
+  text-indent: -1000px;
+  background: url("images/logo.png");
+
+}
+
+#blog {width: 900px;}
+
+#inner-wraper { width: 852px; margin: 24px 24px 48px 24px; }
+
+#footer {
+  width: 850px;
+  height: 35px;
+  padding: 25px;
+  background-color:#333;
+}
+
+/* Main Navigation 
+----------------------------------------------------------------------------- */
+
+.nav {
+  width: 100%px;
+  height: 50px;
+  background-color: #333;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav li  {
+  list-style: none;
+  float: left;
+  margin: 10px 0px 0px 24px;
+  padding: 0px;
+}
+
+.nav li  {
+  list-style: none;
+  float: left;
+  margin: 10px 0px 0px 24px;
+  padding: 0px;
+}
+
+
+.nav li a {
+  font-family: "Helvetica", Arial, Verdana, sans-serif;
+  font-size: 1em; /* 16px --> 16 / 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.social-media-footer p {
+  float: left;
+  width: 75px;
+  margin-top: 5px;
+}
+
+/* social media icons */
+.sm-icons a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: -100px;
+  margin-left: 8px;
+  float: left;
+}
+
+.facebook:link,.facebook:visited {
+  background: url('images/social-media-icons.png') no-repeat -1px 0px;
+}
+
+.facebook:hover {
+  background: url('images/social-media-icons.png') no-repeat -1px -32px;
+}
+
+.twitter:link,.twitter:visited {
+  background: url('images/social-media-icons.png') no-repeat -34px 0px;
+}
+
+.twitter:hover {
+  background: url('images/social-media-icons.png') no-repeat -34px -32px;
+}
+
+.youtube:link,.youtube:visited {
+  background: url('images/social-media-icons.png') no-repeat -67px 0px;
+}
+
+.youtube:hover {
+  background: url('images/social-media-icons.png') no-repeat -67px -32px;
+}
+
+.linkedin:link,.linkedin:visited {
+  background: url('images/social-media-icons.png') no-repeat -100px 0px;
+}
+
+.linkedin:hover {
+  background: url('images/social-media-icons.png') no-repeat -100px -32px;
+}
+
+.pinterest:link,.pinterest:visited {
+  background: url('images/social-media-icons.png') no-repeat -134px 0px;
+}
+
+.pinterest:hover {
+  background: url('images/social-media-icons.png') no-repeat -134px -32px;
+}
+
+p.copyright {
+  width: auto;
+  font-size: 10px;
+  float: right;
+  color: #999;
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
 /* fonts 
 ----------------------------------------------------------------------------- */
 
@@ -57,126 +209,6 @@ p {
   color: #787f83;
 }
 
-
-
-/* ==========================================================================
-   basic styles 
-   ==========================================================================  */
-
-html { margin-top: 0px !important; }
-
-body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; line-height: 1.5em; font-family: "Helvetica", Arial, Verdana, sans-serif;}
-
-#wrapper, #header, #blog, #footer {margin: 0px; padding: 0px;}
-
-
-
-#wrapper {width: 900px; margin: 0 auto; background-color: #fff;}
-
-#header {
-  width: 850px;
-  height: 60px;
-  padding: 25px;
-  background-color:#333;
-}
-
-.logo-header {
-  display: block;
-  overflow: hidden;
-  width: 226px;
-  height: 50px; 
-  text-indent: -1000px;
-  background: url("images/logo.png");
-
-}
-
-#blog {width: 900px;}
-
-
-
-#inner-wraper { width: 852px; margin: 24px 24px 48px 24px; }
-
-#footer {
-  width: 850px;
-  height: 35px;
-  padding: 25px;
-  background-color:#333;
-
-}
-
-
-
-
-
-/* Main Navigation 
------------------------------------------------------------------------------ */
-
-.nav {
-  width: 100%px;
-  height: 50px;
-  background-color: #333;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav li  {
-  list-style: none;
-  float: left;
-  margin: 10px 0px 0px 24px;
-  padding: 0px;
-}
-
-.nav li  {
-  list-style: none;
-  float: left;
-  margin: 10px 0px 0px 24px;
-  padding: 0px;
-}
-
-
-.nav li a {
-  font-family: "Helvetica", Arial, Verdana, sans-serif;
-  font-size: 1em; /* 16px --> 16 / 16 = 1 */
-  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
-  color: #fff;
-  text-decoration: none;
-}
-
-
-/* Footer 
------------------------------------------------------------------------------ */
-
-
-.social-media-footer p {
-float: left;
-width: 75px;
-margin-top: 5px;
-}
-
-/* social media icons */
- 
-.sm-icons a { display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -100px; margin-left: 8px; float: left;}
-
-.facebook:link, .facebook:visited { background: url('images/social-media-icons.png') no-repeat -1px 0px; }
-.facebook:hover { background: url('images/social-media-icons.png') no-repeat -1px -32px; } 
-
-.twitter:link, .twitter:visited { background: url('images/social-media-icons.png') no-repeat -34px 0px; }
-.twitter:hover { background: url('images/social-media-icons.png') no-repeat -34px -32px; } 
-
-.youtube:link, .youtube:visited { background: url('images/social-media-icons.png') no-repeat -67px 0px; }
-.youtube:hover { background: url('images/social-media-icons.png') no-repeat -67px -32px; } 
-
-.linkedin:link, .linkedin:visited { background: url('images/social-media-icons.png') no-repeat -100px 0px; }
-.linkedin:hover { background: url('images/social-media-icons.png') no-repeat -100px -32px; } 
-
-
-.pinterest:link, .pinterest:visited { background: url('images/social-media-icons.png') no-repeat -134px 0px; }
-.pinterest:hover { background: url('images/social-media-icons.png') no-repeat -134px -32px; } 
-
-
-p.copyright {width: auto; font-size: 10px; float: right; color: #999; letter-spacing: 0.1em; text-align: right;}
-
-.copyright a {color: #fff; text-decoration: none;}
 
 /* PORTFOLIO FILTER STYLE 
 ----------------------------------------------------------------------------- */ 
