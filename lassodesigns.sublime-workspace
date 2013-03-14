@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"wp_de",
+				"wp_deregister_script"
+			],
+			[
 				"web",
 				"-webkit-columns:   (property)"
 			],
@@ -91,12 +95,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 225.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
 				"fetc",
-				"Fetch: Package"
+				"Fetch: Manage"
+			],
+			[
+				"git",
+				"Git: Init"
 			],
 			[
 				"f",
@@ -139,10 +151,6 @@
 				"Package Control: Enable Package"
 			],
 			[
-				"pac",
-				"Package Control: Install Package"
-			],
-			[
 				"add",
 				"Project: Add Folder"
 			],
@@ -167,7 +175,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 705.0
+		"width": 435.0
 	},
 	"console":
 	{
@@ -184,17 +192,20 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c-backup.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/comments.php",
+		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/functions.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-project.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/header.php",
+		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/admin/functions/functions.options.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/lassodesigns.sublime-workspace",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/index.php",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/header.php",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-project.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/flexslider.css",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/php/MediaAccess.php",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/metaboxes/portfolio_metabox.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/meta.css",
-		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/functions.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/style.css",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/functions2.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/php/MetaBox.php",
@@ -203,7 +214,6 @@
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/metaboxes/portfolio.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-project-backup.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/footer.php",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page_portfolio_2c-backup.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single-portfolio.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/page-portfolio.php",
 		"/Users/eduardo.lasso/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
@@ -215,7 +225,6 @@
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/css/style.css",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/sidebar.php",
 		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/single.php",
-		"/Applications/MAMP/htdocs/wp/wp-content/themes/lassodesign/comments.php",
 		"/Applications/MAMP/htdocs/lassodesign/index.php",
 		"/Applications/MAMP/htdocs/lassodesign/css/style.css",
 		"/Applications/MAMP/htdocs/lassodesign/header.php",
@@ -263,6 +272,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"jquery",
+			"jquery-script",
 			"span",
 			"Product",
 			"created"
@@ -335,6 +346,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"single-project.php"
+			],
+			[
 				"meta",
 				"css/meta.css"
 			]
@@ -353,6 +368,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 181.0,
+	"side_bar_width": 243.0,
 	"status_bar_visible": true
 }
