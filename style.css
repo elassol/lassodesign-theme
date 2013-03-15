@@ -31,13 +31,20 @@ body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; lin
 
 .logo-header {
   display: block;
-  overflow: hidden;
   width: 226px;
   height: 50px; 
-  text-indent: -1000px;
-  background: url("images/logo.png");
-
+  
 }
+
+.logo-header a {
+display: block;
+overflow: hidden;
+width: 226px;
+height: 50px; 
+text-indent: 1000px;
+background: url("images/logo.png");
+}
+
 
 #blog {width: 900px;}
 
@@ -45,7 +52,7 @@ body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; lin
 
 #footer {
   width: 850px;
-  height: 35px;
+  height: 55px;
   padding: 25px;
   background-color:#333;
 }
@@ -87,10 +94,27 @@ body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; lin
 
 /* Footer
 -----------------------------------------------------------------------------*/
+
+.vcard {
+  float: left;
+  width: 32%;
+  margin-right: 1%;
+}
+
+.vcard p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 0px;
+}
+
+.vcard a {color:#fff; font-size: 12px; text-decoration: none; }
+
+.given-name, .family-name {  font-size: 16px;}
+
 .social-media-footer p {
   float: left;
-  width: 75px;
   margin-top: 5px;
+  margin-right: 1%;
 }
 
 /* social media icons */
