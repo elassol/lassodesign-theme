@@ -5,7 +5,7 @@ Template Name: Portfolio 2 Columns
 ?>  
 <?php get_header(); ?>
  
-    <div id="blog">
+    <div id="main">
         <?php  
             $terms = get_terms("tagportfolio");  
             $count = count($terms);  

@@ -8,6 +8,57 @@ Version: 1.0
 */
 
 
+
+/* fonts 
+----------------------------------------------------------------------------- */
+
+h1, h2, h3, p {margin: 0px; padding: 0px;}
+
+h1, h2, h3, h4, h5, h6 {  margin-bottom: 24px; }
+
+h1 a { text-decoration: none; }
+
+h1 {
+  font-family: "Helvetica", Arial, Verdana, sans-serif;
+  font-size: 1.5em; /* 24px --> 24 / 16 = 1.5 */
+  line-height: 1em; /* 24px --> 24 / 24 = 1 */
+  font-weight: normal;
+  text-transform: none;
+  color: #6caddf;
+}
+
+h2 {
+  
+  font-size: 1.375em; /* 22px --> 22 / 16 = 1.375 */
+  line-height: 1.0909em; /* 24px --> 24 / 22 = 1.090909(09) */
+  font-weight: normal;
+  text-transform: none;
+  color: #6caddf;
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 / 16 = 1.25 */
+  line-height: 1.2em; /* 24px --> 24 / 20 = 1.2 */
+}
+
+h4 {
+  font-size: 1.125em; /* 18px --> 18 / 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 / 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 / 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
+}
+ 
+p {
+  font-size: 1em; /* 16px --> 16 / 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
+  margin-bottom: 24px;
+  color: #787f83;
+}
+
+
 /* ==========================================================================
    basic styles 
    ==========================================================================  */
@@ -16,7 +67,9 @@ html { margin-top: 0px !important; }
 
 body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; line-height: 1.5em; font-family: "Helvetica", Arial, Verdana, sans-serif;}
 
-#wrapper, #header, #blog, #footer {margin: 0px; padding: 0px;}
+
+
+#wrapper, #header, #blog, #footer, #content-wrap {margin: 0px; padding: 0px;}
 
 
 
@@ -46,13 +99,13 @@ background: url("images/logo.png");
 }
 
 
-#blog {width: 900px;}
+#blog, #content-wrap {width: 900px;}
 
 #inner-wraper { width: 852px; margin: 24px 24px 48px 24px; }
 
 #footer {
   width: 850px;
-  height: 55px;
+  height: 100px;
   padding: 25px;
   background-color:#333;
 }
@@ -95,10 +148,16 @@ background: url("images/logo.png");
 /* Footer
 -----------------------------------------------------------------------------*/
 
+
+/*Sticky Fotter*/
+
+
+
 .vcard {
   float: left;
-  width: 32%;
+  width: 49%;
   margin-right: 1%;
+  background-color: green;
 }
 
 .vcard p {
@@ -111,10 +170,24 @@ background: url("images/logo.png");
 
 .given-name, .family-name {  font-size: 16px;}
 
-.social-media-footer p {
+
+.resume-wrap {
   float: left;
+  width: 25%;
+  background-color: yellow;
+}
+
+.social-media-footer {
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+  background-color: red;
+}
+
+.social-media-footer p {
   margin-top: 5px;
   margin-right: 1%;
+  margin-bottom: 0px;
 }
 
 /* social media icons */
@@ -168,10 +241,11 @@ background: url("images/logo.png");
   background: url('images/social-media-icons.png') no-repeat -134px -32px;
 }
 
+.copyright-wrap {width: 100%; background: purple;}
+
 p.copyright {
-  width: auto;
+
   font-size: 10px;
-  float: right;
   color: #999;
   letter-spacing: 0.1em;
   text-align: right;
@@ -184,54 +258,23 @@ p.copyright {
 
 
 
-/* fonts 
------------------------------------------------------------------------------ */
+/* ==========================================================================
+   homepage 
+   ==========================================================================  */
 
-h1, h2, h3, p {margin: 0px; padding: 0px;}
 
-h1, h2, h3, h4, h5, h6 {  margin-bottom: 24px; }
-
-h1 a { text-decoration: none; }
-
-h1 {
-  font-family: "Helvetica", Arial, Verdana, sans-serif;
-  font-size: 1.5em; /* 24px --> 24 / 16 = 1.5 */
-  line-height: 1em; /* 24px --> 24 / 24 = 1 */
-  font-weight: normal;
-  text-transform: none;
-  color: #6caddf;
+.tag-line {
+   margin: 12px 24px; 
+   font-size: 23px;
 }
 
-h2 {
-  
-  font-size: 1.375em; /* 22px --> 22 / 16 = 1.375 */
-  line-height: 1.0909em; /* 24px --> 24 / 22 = 1.090909(09) */
-  font-weight: normal;
-  text-transform: none;
-  color: #6caddf;
-}
 
-h3 {
-  font-size: 1.25em; /* 20px --> 20 / 16 = 1.25 */
-  line-height: 1.2em; /* 24px --> 24 / 20 = 1.2 */
-}
 
-h4 {
-  font-size: 1.125em; /* 18px --> 18 / 16 = 1.125 */
-  line-height: 1.333em; /* 24px --> 24 / 18 = 1.3333333(3) */
-}
 
-h5, h6 {
-  font-size: 1em; /* 16px --> 16 / 16 = 1 */
-  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
-}
- 
-p {
-  font-size: 1em; /* 16px --> 16 / 16 = 1 */
-  line-height: 1.5em; /* 24px --> 24 / 16 = 1.5 */
-  margin-bottom: 24px;
-  color: #787f83;
-}
+
+/* ==========================================================================
+   Portfolio page 
+   ==========================================================================  */
 
 
 /* PORTFOLIO FILTER STYLE 
