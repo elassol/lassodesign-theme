@@ -60,6 +60,17 @@ function register_my_menu() {
 }
 
 
+//////////////////////////////////////////////////////////////
+// Theme Footer
+/////////////////////////////////////////////////////////////
+
+add_action('wp_footer','lassodesign_footer');
+
+function lassodesign_footer() {  
+    include(TEMPLATEPATH . '/php/slideshow.php');    
+}
+
+
 add_action('init', 'project_custom_init');
 
 /* SECTION - project_custom_init */  
@@ -201,56 +212,19 @@ function lassodesigns_setup() {
 
 
 
-// Adding FlexSlider 
-function efs_script(){  
-  
-print '<script type="text/javascript" charset="utf-8"> 
-  jQuery(window).load(function() { 
-    jQuery(\'.flexslider\').flexslider(); 
-  }); 
-</script>';  
-  
-}  
-  
-add_action('wp_head', 'efs_script');
+//////////////////////////////////////////////////////////////
+// Slideshow Shortcode
+/////////////////////////////////////////////////////////////
 
-function efs_get_slider(){  
-  
-$slider= '<div class="flexslider"> 
-      <ul class="slides">';  
-  
-    $efs_query= "post_type=slider-image";  
-    query_posts($efs_query);  
-      
-      
-    if (have_posts()) : while (have_posts()) : the_post();   
-        $img= get_the_post_thumbnail( $post->ID, 'large' );  
-          
-        $slider.='<li>'.$img.'</li>';  
-              
-    endwhile; endif; wp_reset_query();  
-    $slider.= '</ul> 
-    </div>';  
-      
-    return $slider;   
-  
-}  
-/**add the shortcode for the slider- for use in editor**/  
-  
-function efs_insert_slider($atts, $content=null){  
-  
-$slider= efs_get_slider();  
-  
-return $slider;  
-  
-}  
-add_shortcode('ef_slider', 'efs_insert_slider');  
-/**add template tag- for use in themes**/  
-  
-function efs_slider(){  
-  
-    print efs_get_slider();  
-}  
+function lassodesign_slideshow( $atts, $content = null ) {
+    $content = str_replace('<br />', '', $content);
+    $content = str_replace('<img', '<li><img', $content);
+    $content = str_replace('/>', '/></li>', $content);
+    return '<div class="slideshow"><div class="flexslider"><ul class="slides">' . $content . '</ul></div></div>';
+}
+add_shortcode('slideshow', 'lassodesign_slideshow');
+
+
 
 
 ?>
