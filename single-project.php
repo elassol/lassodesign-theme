@@ -5,12 +5,12 @@
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         <?php 
             global $portfolio_meta;
-            global $media_acess;
+            global $media_attach;
             
             $meta = get_post_meta(get_the_ID(), $portfolio_meta->get_the_id(), TRUE);
         ?>
         <div class="porfolio-preview clearfix">
-            <?php echo "<pre>"; print_r($meta); echo "</pre>"; ?>  
+            
              
 
              <?php 
@@ -30,7 +30,7 @@
                             });
                         </script>
                             <?php 
-                            foreach ($meta['imgs'] as $work_img) { ?>
+                            foreach ($meta['work_images_group'] as $work_img) { ?>
                             <li data-thumb="<?php echo $work_img['work_img']; ?>">
                                 <img src="<?php echo $work_img['work_img']; ?>">
                             </li>
@@ -47,8 +47,7 @@
                     </div>
                 </div>
                 <?php } ?>
-
-
+                </div>
             <div class="info-work">
                          
                     <div class="navigation clearfix">  
@@ -60,30 +59,16 @@
                 <h1><?php the_title(); ?></h1>  
                 
 
-                
-
                 <p><?php echo get_the_content(); ?></p>
                 <?php if($meta['url'] != ""){ ?>
                         <p><strong>URL</strong> <a href="<?php echo $meta['url']; ?>" target="_blank"><?php echo $meta['url']; ?></a></p>
                  <?php } ?>
 
-            </div>
-
-            
-            
-                
-           
-  
-                             
-                                            
-                      
+            </div>   
                  
-            </div>
-        </div>
+            </div>       
             <?php endwhile; ?>
         <?php endif; ?>
-
-
  
 <?php get_sidebar(); ?>  
 <?php get_footer(); ?>

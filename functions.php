@@ -184,11 +184,11 @@ function my_metabox_styles()
 {
     if ( is_admin() ) 
     { 
-        wp_enqueue_style( 'wpalchemy-metabox', THEME_DIR . '/css/meta.css' );
+        wp_enqueue_style( 'custom_meta_css', THEME_DIR . '/css/meta.css' );
     }
 }
 
-$media_access = new WPAlchemy_MediaAccess();
+$meta_attach = new WPAlchemy_MediaAccess();
  
 $portfolio_meta = new WPAlchemy_MetaBox(array
 (
