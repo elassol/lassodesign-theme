@@ -14,7 +14,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'style' );  
 
     /** REGISTER css/screen.cs **/  
-    wp_register_style( 'flexslider_css', THEME_DIR . '/css/flexslider.css');  
+    wp_register_style( 'flexslider_css', THEME_DIR . '/css/flexslider.css', false, '1.7', 'all');  
     wp_enqueue_style( 'flexslider_css' );  
           
 }  
@@ -42,7 +42,7 @@ function enqueue_scripts() {
     wp_enqueue_script( 'filterable' );  
 
     /** REGISTER flexslider  **/  
-    wp_register_script( 'flexslider', THEME_DIR . '/js/jquery.flexslider-min.js', array( 'jquery' ), false, true ); 
+    wp_register_script( 'flexslider', THEME_DIR . '/js/jquery.flexslider-min.js', array( 'jquery' ), '1.7', true ); 
     wp_enqueue_script( 'flexslider' );  
           
 }  
@@ -64,11 +64,11 @@ function register_my_menu() {
 // Theme Footer
 /////////////////////////////////////////////////////////////
 
-add_action('wp_footer','lassodesign_footer');
+// add_action('wp_footer','lassodesign_footer');
 
-function lassodesign_footer() {  
-    include(TEMPLATEPATH . '/php/slideshow.php');    
-}
+// function lassodesign_footer() {  
+   
+// }
 
 
 add_action('init', 'project_custom_init');
@@ -132,7 +132,8 @@ function project_custom_init()
 	    'labels' => $labels,  
 	    'show_ui' => true,  
 	    'query_var' => true,  
-	    'rewrite' => array( 'slug' => 'tag-portfolio' ),  
+	    'rewrite' => array( 'slug' => 'tag-portfolio' ),
+          
 	));  
 
 }  
@@ -225,6 +226,29 @@ function lassodesign_slideshow( $atts, $content = null ) {
 add_shortcode('slideshow', 'lassodesign_slideshow');
 
 
+// add button for slideshow in cms
 
+add_action('init', 'add_button');  
 
+function add_button() {
+   if ( current_user_can('edit_posts') &&  current_user_can('edit_pages') )
+   {
+     add_filter('mce_external_plugins', 'add_plugin');
+     add_filter('mce_buttons', 'register_button');
+   }
+}
+
+function register_button($buttons) {  
+   array_push($buttons, "quote");  
+   return $buttons;  
+}  
+
+function add_plugin($plugin_array) {  
+   $plugin_array['quote'] = THEME_DIR . '/js/customcodes.js';  
+   return $plugin_array;  
+}
+
+/**
+*  
+*/  
 ?>
