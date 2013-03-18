@@ -14,7 +14,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'style' );  
 
     /** REGISTER css/screen.cs **/  
-    wp_register_style( 'flexslider_css', THEME_DIR . '/css/flexslider.css');  
+    wp_register_style( 'flexslider_css', THEME_DIR . '/css/flexslider.css', false, '1.7', 'all');  
     wp_enqueue_style( 'flexslider_css' );  
           
 }  
@@ -42,7 +42,7 @@ function enqueue_scripts() {
     wp_enqueue_script( 'filterable' );  
 
     /** REGISTER flexslider  **/  
-    wp_register_script( 'flexslider', THEME_DIR . '/js/jquery.flexslider-min.js', array( 'jquery' ), false, true ); 
+    wp_register_script( 'flexslider', THEME_DIR . '/js/jquery.flexslider-min.js', array( 'jquery' ), '1.7', true ); 
     wp_enqueue_script( 'flexslider' );  
           
 }  
@@ -58,6 +58,17 @@ add_action( 'init', 'register_my_menu' );
 function register_my_menu() {
     register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
 }
+
+
+//////////////////////////////////////////////////////////////
+// Theme Footer
+/////////////////////////////////////////////////////////////
+
+// add_action('wp_footer','lassodesign_footer');
+
+// function lassodesign_footer() {  
+   
+// }
 
 
 add_action('init', 'project_custom_init');
@@ -121,7 +132,8 @@ function project_custom_init()
 	    'labels' => $labels,  
 	    'show_ui' => true,  
 	    'query_var' => true,  
-	    'rewrite' => array( 'slug' => 'tag-portfolio' ),  
+	    'rewrite' => array( 'slug' => 'tag-portfolio' ),
+          
 	));  
 
 }  
@@ -172,11 +184,11 @@ function my_metabox_styles()
 {
     if ( is_admin() ) 
     { 
-        wp_enqueue_style( 'wpalchemy-metabox', THEME_DIR . '/css/meta.css' );
+        wp_enqueue_style( 'custom_meta_css', THEME_DIR . '/css/meta.css' );
     }
 }
 
-$media_access = new WPAlchemy_MediaAccess();
+$meta_attach = new WPAlchemy_MediaAccess();
  
 $portfolio_meta = new WPAlchemy_MetaBox(array
 (
@@ -201,56 +213,146 @@ function lassodesigns_setup() {
 
 
 
-// Adding FlexSlider 
-function efs_script(){  
-  
-print '<script type="text/javascript" charset="utf-8"> 
-  jQuery(window).load(function() { 
-    jQuery(\'.flexslider\').flexslider(); 
-  }); 
-</script>';  
-  
-}  
-  
-add_action('wp_head', 'efs_script');
+//////////////////////////////////////////////////////////////
+// Slideshow Shortcode
+/////////////////////////////////////////////////////////////
 
-function efs_get_slider(){  
-  
-$slider= '<div class="flexslider"> 
-      <ul class="slides">';  
-  
-    $efs_query= "post_type=slider-image";  
-    query_posts($efs_query);  
-      
-      
-    if (have_posts()) : while (have_posts()) : the_post();   
-        $img= get_the_post_thumbnail( $post->ID, 'large' );  
-          
-        $slider.='<li>'.$img.'</li>';  
-              
-    endwhile; endif; wp_reset_query();  
-    $slider.= '</ul> 
-    </div>';  
-      
-    return $slider;   
-  
+function lassodesign_slideshow( $atts, $content = null ) {
+    $content = str_replace('<br />', '', $content);
+    $content = str_replace('<img', '<li><img', $content);
+    $content = str_replace('/>', '/></li>', $content);
+    return '<div class="slideshow"><div class="flexslider"><ul class="slides">' . $content . '</ul></div></div>';
+}
+add_shortcode('slideshow', 'lassodesign_slideshow');
+
+
+// add button for slideshow in cms
+
+add_action('init', 'add_button');  
+
+function add_button() {
+   if ( current_user_can('edit_posts') &&  current_user_can('edit_pages') )
+   {
+     add_filter('mce_external_plugins', 'add_plugin');
+     add_filter('mce_buttons', 'register_button');
+   }
+}
+
+function register_button($buttons) {  
+   array_push($buttons, "quote");  
+   return $buttons;  
 }  
-/**add the shortcode for the slider- for use in editor**/  
+
+function add_plugin($plugin_array) {  
+   $plugin_array['quote'] = THEME_DIR . '/js/customcodes.js';  
+   return $plugin_array;  
+}
+
+
+//////////////////////////////////////////////////////////////
+// Contact form
+/////////////////////////////////////////////////////////////
+
+
+
+// function to get the IP address of the user
+function wptuts_get_the_ip() {
+  if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+    return $_SERVER["HTTP_X_FORWARDED_FOR"];
+  }
+  elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
+    return $_SERVER["HTTP_CLIENT_IP"];
+  }
+  else {
+    return $_SERVER["REMOTE_ADDR"];
+  }
+}
+
+// the shortcode
+function wptuts_contact_form_sc($atts) {
+  extract(shortcode_atts(array(
+    "email" => get_bloginfo('admin_email'),
+    "subject" => '',
+    "label_name" => 'Your Name',
+    "label_email" => 'Your E-mail Address',
+    "label_subject" => 'Subject',
+    "label_message" => 'Your Message',
+    "label_submit" => 'Submit',
+    "error_empty" => 'Please fill in all the required fields.',
+    "error_noemail" => 'Please enter a valid e-mail address.',
+    "success" => 'Thanks for your e-mail! We\'ll get back to you as soon as we can.'
+  ), $atts));
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $error = false;
+    $required_fields = array("your_name", "email", "message", "subject");
+
+    foreach ($_POST as $field => $value) {
+      if (get_magic_quotes_gpc()) {
+        $value = stripslashes($value);
+      }
+      $form_data[$field] = strip_tags($value);
+    }
+
+    foreach ($required_fields as $required_field) {
+      $value = trim($form_data[$required_field]);
+      if(empty($value)) {
+        $error = true;
+        $result = $error_empty;
+      }
+    }
+
+    if(!is_email($form_data['email'])) {
+      $error = true;
+      $result = $error_noemail;
+    }
+
+    if ($error == false) {
+      $email_subject = "[" . get_bloginfo('name') . "] " . $form_data['subject'];
+      $email_message = $form_data['message'] . "\n\nIP: " . wptuts_get_the_ip();
+      $headers  = "From: ".$form_data['your_name']." <".$form_data['email'].">\n";
+      $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+      $headers .= "Content-Transfer-Encoding: 8bit\n";
+      wp_mail($email, $email_subject, $email_message, $headers);
+      $result = $success;
+      $sent = true;
+    }
+  }
+
+  if($result != "") {
+    $info = '<div class="info">'.$result.'</div>';
+  }
+  $email_form = '<form class="contact-form" method="post" action="'.get_permalink().'">
+    <div>
+      <label for="cf_name">'.$label_name.':</label>
+      <input type="text" name="your_name" id="cf_name" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
+    </div>
+    <div>
+      <label for="cf_email">'.$label_email.':</label>
+      <input type="text" name="email" id="cf_email" size="50" maxlength="50" value="'.$form_data['email'].'" />
+    </div>
+    <div>
+      <label for="cf_subject">'.$label_subject.':</label>
+      <input type="text" name="subject" id="cf_subject" size="50" maxlength="50" value="'.$subject.$form_data['subject'].'" />
+    </div>
+    <div>
+      <label for="cf_message">'.$label_message.':</label>
+      <textarea name="message" id="cf_message" cols="50" rows="15">'.$form_data['message'].'</textarea>
+    </div>
+    <div>
+      <input type="submit" value="'.$label_submit.'" name="send" id="cf_send" />
+    </div>
+  </form>';
   
-function efs_insert_slider($atts, $content=null){  
-  
-$slider= efs_get_slider();  
-  
-return $slider;  
-  
-}  
-add_shortcode('ef_slider', 'efs_insert_slider');  
-/**add template tag- for use in themes**/  
-  
-function efs_slider(){  
-  
-    print efs_get_slider();  
-}  
+  if($sent == true) {
+    return $info;
+  } else {
+    return $info.$email_form;
+  }
+} add_shortcode('contact', 'wptuts_contact_form_sc');
+
+
+
 
 
 ?>

@@ -1,29 +1,36 @@
 <?php get_header(); ?>
- 
-    <div id="blog">
-        <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-         
-        <div class="post">
-        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-         
-            <div class="entry">   
-                <?php the_post_thumbnail(); ?>
-                <?php the_content(); ?>
- 
-                <p class="postmetadata">
-                <?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
-                <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?>
-                </p>
- 
-            </div>
-        </div>
-<?php endwhile; ?>
-         
-        <div class="navigation">
-        <?php posts_nav_link(); ?>
-        </div>
-         
-        <?php endif; ?>
+    
+    <div id="main">
+    <div class="tag-line"><h2>Lassodesign is a estudy design run by Eduardo Lasso, doing simple and beutiful sites</h2></div>
+
+    <div id="portfolio-wrapper">   
+            <h3>Latest Work</h3>
+            <ul  id="portfolio-list">
+
+                <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 3 ) ); ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+               
+
+                <li class="portfolio-item <?php echo strtolower($tax); ?> all">  
+                    <div class="thumb"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail( array(270, 225) ); ?></a></div>  
+                    <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>  
+                     
+                    <p class="links"><a href="<?php the_permalink() ?>">More Details</a></p>  
+                </li> 
+                <?php endwhile; ?>
+                
+
+               
+
+            </ul>
     </div>
+    </div>
+
+
+
+
+
+
 <?php get_sidebar(); ?>   
 <?php get_footer(); ?>

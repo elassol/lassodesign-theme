@@ -9,6 +9,10 @@ Version: 1.0
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> bd14c7975f930c5792cf78b474329f84ed2d1520
 /* fonts 
 ----------------------------------------------------------------------------- */
 
@@ -59,9 +63,12 @@ p {
 }
 
 
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> css
+>>>>>>> bd14c7975f930c5792cf78b474329f84ed2d1520
 /* ==========================================================================
    basic styles 
    ==========================================================================  */
@@ -70,7 +77,9 @@ html { margin-top: 0px !important; }
 
 body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; line-height: 1.5em; font-family: "Helvetica", Arial, Verdana, sans-serif;}
 
-#wrapper, #header, #blog, #footer {margin: 0px; padding: 0px;}
+
+
+#wrapper, #header, #blog, #footer, #content-wrap {margin: 0px; padding: 0px;}
 
 
 
@@ -85,31 +94,31 @@ body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; lin
 
 .logo-header {
   display: block;
-  overflow: hidden;
   width: 226px;
   height: 50px; 
-  text-indent: -1000px;
-  background: url("images/logo.png");
-
+  
 }
 
-#blog {width: 900px;}
+.logo-header a {
+display: block;
+overflow: hidden;
+width: 226px;
+height: 50px; 
+text-indent: 1000px;
+background: url("images/logo.png");
+}
 
 
+#blog, #content-wrap {width: 900px;}
 
 #inner-wraper { width: 852px; margin: 24px 24px 48px 24px; }
 
 #footer {
   width: 850px;
-  height: 35px;
+  height: 100px;
   padding: 25px;
   background-color:#333;
-
 }
-
-
-
-
 
 /* Main Navigation 
 ----------------------------------------------------------------------------- */
@@ -146,40 +155,137 @@ body {background-color: #ededed; margin: 0px; padding: 0px; margin-top: 0px; lin
 }
 
 
-/* Footer 
------------------------------------------------------------------------------ */
+/* Footer
+-----------------------------------------------------------------------------*/
 
+
+/*Sticky Fotter*/
+
+
+
+.vcard {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+  background-color: green;
+}
+
+.vcard p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 0px;
+}
+
+.vcard a {color:#fff; font-size: 12px; text-decoration: none; }
+
+.given-name, .family-name {  font-size: 16px;}
+
+
+.resume-wrap {
+  float: left;
+  width: 25%;
+  background-color: yellow;
+}
+
+.social-media-footer {
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+  background-color: red;
+}
 
 .social-media-footer p {
-float: left;
-width: 75px;
-margin-top: 5px;
+  margin-top: 5px;
+  margin-right: 1%;
+  margin-bottom: 0px;
 }
 
 /* social media icons */
- 
-.sm-icons a { display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -100px; margin-left: 8px; float: left;}
+.sm-icons a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: -100px;
+  margin-left: 8px;
+  float: left;
+}
 
-.facebook:link, .facebook:visited { background: url('images/social-media-icons.png') no-repeat -1px 0px; }
-.facebook:hover { background: url('images/social-media-icons.png') no-repeat -1px -32px; } 
+.facebook:link,.facebook:visited {
+  background: url('images/social-media-icons.png') no-repeat -1px 0px;
+}
 
-.twitter:link, .twitter:visited { background: url('images/social-media-icons.png') no-repeat -34px 0px; }
-.twitter:hover { background: url('images/social-media-icons.png') no-repeat -34px -32px; } 
+.facebook:hover {
+  background: url('images/social-media-icons.png') no-repeat -1px -32px;
+}
 
-.youtube:link, .youtube:visited { background: url('images/social-media-icons.png') no-repeat -67px 0px; }
-.youtube:hover { background: url('images/social-media-icons.png') no-repeat -67px -32px; } 
+.twitter:link,.twitter:visited {
+  background: url('images/social-media-icons.png') no-repeat -34px 0px;
+}
 
-.linkedin:link, .linkedin:visited { background: url('images/social-media-icons.png') no-repeat -100px 0px; }
-.linkedin:hover { background: url('images/social-media-icons.png') no-repeat -100px -32px; } 
+.twitter:hover {
+  background: url('images/social-media-icons.png') no-repeat -34px -32px;
+}
+
+.youtube:link,.youtube:visited {
+  background: url('images/social-media-icons.png') no-repeat -67px 0px;
+}
+
+.youtube:hover {
+  background: url('images/social-media-icons.png') no-repeat -67px -32px;
+}
+
+.linkedin:link,.linkedin:visited {
+  background: url('images/social-media-icons.png') no-repeat -100px 0px;
+}
+
+.linkedin:hover {
+  background: url('images/social-media-icons.png') no-repeat -100px -32px;
+}
+
+.pinterest:link,.pinterest:visited {
+  background: url('images/social-media-icons.png') no-repeat -134px 0px;
+}
+
+.pinterest:hover {
+  background: url('images/social-media-icons.png') no-repeat -134px -32px;
+}
+
+.copyright-wrap {width: 100%; background: purple;}
+
+p.copyright {
+
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}
 
 
-.pinterest:link, .pinterest:visited { background: url('images/social-media-icons.png') no-repeat -134px 0px; }
-.pinterest:hover { background: url('images/social-media-icons.png') no-repeat -134px -32px; } 
+
+/* ==========================================================================
+   homepage 
+   ==========================================================================  */
 
 
-p.copyright {width: auto; font-size: 10px; float: right; color: #999; letter-spacing: 0.1em; text-align: right;}
+.tag-line {
+   margin: 12px 24px; 
+   font-size: 23px;
+}
 
-.copyright a {color: #fff; text-decoration: none;}
+
+
+
+
+/* ==========================================================================
+   Portfolio page 
+   ==========================================================================  */
+
 
 /* PORTFOLIO FILTER STYLE 
 ----------------------------------------------------------------------------- */ 
@@ -334,6 +440,18 @@ margin-right: 4px;
 
 .next a:link, .next a:active, .next a:visited {background: url("images/icons-arrows.png") no-repeat -25px 0px;}
 .next a:hover {background: url("images/icons-arrows.png") no-repeat -25px -25px;}
+
+/* ==========================================================================
+   Contact
+   ==========================================================================  */
+
+.contact-form label, .contact-form input, .contact-form textarea { display: block; margin: 10px 0; }
+.contact-form label { font-size: larger; }
+.contact-form input { padding: 5px; }
+#cf_message { width: 90%; padding: 10px; }
+#cf_send { padding: 5px 10px; }
+
+
 
 /* ==========================================================================
    Tools 
