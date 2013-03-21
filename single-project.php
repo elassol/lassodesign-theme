@@ -11,8 +11,6 @@
         ?>
         <div class="porfolio-preview clearfix">
             
-             
-
              <?php 
                     if ($meta['featured_attachment_type'] == "images") {
                 ?>
@@ -47,8 +45,18 @@
                     </div>
                 </div>
                 <?php } ?>
-                </div>
-            <div class="info-work">
+<<<<<<< HEAD
+
+
+                
+
+
+        </div>
+
+=======
+        </div>
+>>>>>>> 544a6e702f72ee9f461e7e7b249e360384e6122a
+        <div class="info-work">
                          
                     <div class="navigation clearfix">  
                         <span class="previews"><?php previous_post_link('%link', 'Previous'); ?></span>
@@ -64,11 +72,19 @@
                         <p><strong>URL</strong> <a href="<?php echo $meta['url']; ?>" target="_blank"><?php echo $meta['url']; ?></a></p>
                  <?php } ?>
 
-            </div>   
+<<<<<<< HEAD
+                 </div>
+          
                  
-            </div>       
+    </div>  
+
+=======
+        </div>   
+                 
+    </div>       
+>>>>>>> 544a6e702f72ee9f461e7e7b249e360384e6122a
             <?php endwhile; ?>
         <?php endif; ?>
  
-<?php get_sidebar(); ?>  
+
 <?php get_footer(); ?>
